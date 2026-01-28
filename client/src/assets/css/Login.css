@@ -1,0 +1,141 @@
+/* Login.css */
+
+/* Scoped variables for the login page */
+.login-wrapper {
+  --red: #ff1e1e;
+  --dark: #0b0b0b;
+  --card-bg: #121212;
+  --muted: #b5b5b5;
+  --border-color: #1f1f1f;
+  
+  /* Layout & Fonts */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #260000, #050505);
+  font-family: 'Poppins', sans-serif;
+  
+  /* Reset box-sizing just for this section if needed */
+  box-sizing: border-box;
+}
+
+.login-wrapper * {
+  box-sizing: border-box;
+}
+
+.login-wrapper .container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+.login-wrapper .card {
+  background: var(--card-bg);
+  border-radius: 22px;
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  
+  /* --- ANIMATION FIX --- */
+  opacity: 0; /* Start invisible */
+  animation: fadeUp 0.7s ease forwards; /* 'forwards' keeps it visible at the end */
+}
+
+.login-wrapper .logo {
+  text-align: center;
+  color: var(--red);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-wrapper .subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+}
+
+.login-wrapper .form-group {
+  margin-bottom: 18px;
+}
+
+.login-wrapper label {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.login-wrapper input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: #0e0e0e;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-wrapper input:focus {
+  outline: none;
+  border-color: var(--red);
+}
+
+.login-wrapper .btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--red), #e60000);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-wrapper .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 30, 30, 0.3);
+}
+
+.login-wrapper .links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.login-wrapper .links a {
+  color: var(--red);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.login-wrapper .links a:hover {
+  color: #ff6666;
+}
+
+.login-wrapper .footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.7rem;
+  color: #777;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

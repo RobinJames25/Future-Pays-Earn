@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Terms & Disclaimer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Terms & Disclaimer</h1>
+
+  <p>
+    Future Pay Earns provides a digital investment platform.
+    All earnings shown are projections and NOT guaranteed.
+  </p>
+
+  <p>
+    Investing involves risk, and users may lose part or all of their capital.
+  </p>
+
+  <p>
+    By using this website, you agree to take full responsibility
+    for your investment decisions.
+  </p>
+</div>
+
+</body>
+</html>
