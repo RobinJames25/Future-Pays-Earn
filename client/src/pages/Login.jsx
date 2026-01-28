@@ -1,17 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // 1. Import this
 import '../assets/css/Login.css';
 
 const Login = () => {
+  const navigate = useNavigate(); // 2. Initialize the hook
+
   const handleLogin = (e) => {
     e.preventDefault();
-    // Logic for login goes here
+    // Login logic here (API calls, validation, etc.)
+    
     console.log("Redirecting to dashboard...");
-    window.location.href = '/dashboard'; 
+    
+    // 3. Use navigate instead of window.location.href
+    navigate('/dashboard'); 
   };
 
   return (
     <>
-      {/* Load Font via style tag or add to your index.html/layout.js */}
       <style>
         {`@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');`}
       </style>
